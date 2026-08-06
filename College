@@ -1,40 +1,122 @@
-# NESCol Networking Lab Preparation & Infrastructure Logs
-### Operator: Liam Chillery | Target Track: Access to Networking (SCQF Level 6)
+# Master Network Engineering Architecture & Diagnostic Portfolio
+### Systems Architect: Liam Chillery (Workstation: TheFuture)
+### Target Track: Access to Networking (SCQF Level 6) — NESCol City Campus [local]
 
-This repository serves as a live version-controlled portfolio documenting hands-on terminal diagnostics, Layer 2 hardware address mapping, and Layer 3 path trace analysis executed in preparation for the computing faculty intake at North East Scotland College.
-
----
-
-## 📡 Terminal Diagnostics Log Matrix
-
-### 1. Layer 3 Edge Interconnection (ICMP Ping)
-*   **Target Endpoint:** Google Public DNS (`8.8.8.8`)
-*   **Packet Integrity:** Sent = 4, Received = 4, Lost = 0 (0% packet loss)
-*   **Latency Profile:** Minimum = 17ms, Maximum = 20ms, Average = 18ms
-*   **Architectural Value:** Verifies an uncoagulated physical link layer, optimal ISP transit velocity, and complete round-trip packet stability from coordinates.
-
-### 2. Multi-Hop Gateway Path Analysis (Traceroute)
-*   **Route Geometry:** Decrypted 11 total Layer 3 hops to destination.
-*   **Local Link Layer:** Hop 1 (`192.168.0.1` / `skysr213.Home`) returned a near-zero latency response (<1 ms), proving zero interference across local intranet boundaries.
-*   **Core Transit Velocity:** Detected explicit data-packet handover to external edge network routing hubs at Hop 7 (`209.85.249.149`) with a baseline fibre propagation delay of 17ms.
-
-### 3. Layer 2 Hardware Address Mapping (ARP Table Capture)
-*   **Subnet Gateway:** privada IP `192.168.0.248` linked to an active Realtek Wi-Fi 6 (802.11ax) network card (OUI: `70-08-94`).
-*   **Live Node Extraction Table:**
-
-| Local private IP | Physical MAC Address | Allocation Type | Network Infrastructure Entity |
-| :--- | :--- | :--- | :--- |
-| `192.168.0.1` | `bc-85-d0-ab-f3-60` | Dynamic | Master Sky Router Default Gateway |
-| `192.168.0.10` | `1c-4d-89-cc-da-fd` | Dynamic | Active Intranet Target Node |
-| `192.168.0.26` | `3a-81-c3-eb-32-ab` | Dynamic | Active Intranet Target Node |
-| `192.168.0.255` | `ff-ff-ff-ff-ff-ff` | Static | Universal Local Broadcast Boundary |
+This repository houses an immutable, end-to-end version-controlled portfolio documenting core network diagnostic operations, Layer 2 hardware topologies, and Layer 7 domain resolution frameworks. This log serves as unshakeable verification of practical systems proficiency prior to academic intake.
 
 ---
 
-## 🛡️ Core Commercial Application: InsideJob Consultant LLP
-The data-mining methodologies and terminal hooks documented in this repository are directly utilized to feed **Category 1 (Mainframe Integrity & Network Command Latency)** of the proprietary **Vulnerability & Penetration Index (VPI-X)** software app. 
+## 🛠️ Complete Terminal Operation & Verification Log
 
-By capturing ARP cache address tables and profiling OUI signatures, the index automatically vectors system processing delay factors and equipment vulnerabilities across high-value residential and corporate assets.
+```powershell
+Copyright (C) Microsoft Corporation. All rights reserved.
+Workstation OS Profile: Windows PowerShell Core (Node: Hybrid)
+```
+
+### Layer 3 Edge Interconnection Verification (ICMP Ping)
+```powershell
+PS C:\Users\Liams> ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+Reply from 8.8.8.8: bytes=32 time=20ms TTL=117
+Reply from 8.8.8.8: bytes=32 time=17ms TTL=117
+Reply from 8.8.8.8: bytes=32 time=19ms TTL=117
+Reply from 8.8.8.8: bytes=32 time=17ms TTL=117
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 17ms, Maximum = 20ms, Average = 18ms
+```
+*   **Diagnostic Metrics:** 0% packet degradation over external WAN routing path. Average link velocity of 18ms confirms optimal, uncoagulated transit throughput across local exchanges.
+
+### Layer 3 Multi-Hop Path Analysis (Traceroute Engine)
+```powershell
+PS C:\Users\Liams> tracert 8.8.8.8
+
+Tracing route to dns.google
+over a maximum of 30 hops:
+
+  1     1 ms    <1 ms    <1 ms  skysr213.Home
+  2     1 ms    <1 ms    <1 ms  94.7.23.215
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5    18 ms    17 ms    17 ms  2.120.13.44
+  6    17 ms    17 ms    17 ms  2.127.241.181
+  7    23 ms    20 ms    18 ms  209.85.249.149
+  8    20 ms    17 ms    18 ms  172.253.65.211
+  9    20 ms    17 ms    17 ms  dns.google
+
+Trace complete.
+```
+*   **Diagnostic Metrics:** Hop 1 verifies a near-zero latency connection (<1 ms) to the physical intranet master boundary (`192.168.0.1`). Hops 3 & 4 demonstrate standard enterprise ICMP stealth filtering, while Hops 5-6 map high-velocity national fiber trunk propagation boundaries.
+
+### Layer 2 Physical Device Fingerprint Isolation
+```powershell
+PS C:\Users\Liams> getmac /v /fo list
+
+Connection Name:  Wi-Fi
+Network Adapter:  Realtek RTL8852BE WiFi 6 802.11ax PCIe Adapter
+Physical Address: 70-08-94-1C-19-87
+Transport Name:   \Device\Tcpip_{4159FB74-EAB3-49F5-9222-0FE76E10B6B6}
+
+Connection Name:  Ethernet
+Network Adapter:  Realtek PCIe GbE Family Controller
+Physical Address: 40-C2-BA-6C-E4-B6
+Transport Name:   Media disconnected
+```
+*   **Diagnostic Metrics:** Primary wireless transceiver is isolated as a modern Realtek Wi-Fi 6 (802.11ax) PCIe engine carrying an IEEE Organizational Unique Identifier (OUI) signature of `70-08-94`.
+
+### Full Interface Parameter Matrix Configuration
+```powershell
+PS C:\Users\Liams> ipconfig /all
+
+Wireless LAN adapter Wi-Fi:
+   Connection-specific DNS Suffix  . : Home
+   Description . . . . . . . . . . . : Realtek RTL8852BE WiFi 6 802.11ax PCIe Adapter
+   Physical Address. . . . . . . . . : 70-08-94-1C-19-87
+   DHCP Enabled. . . . . . . . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 192.168.0.248(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : 05 August 2026 00:03:32
+   Lease Expires . . . . . . . . . . : 08 August 2026 00:03:31
+   Default Gateway . . . . . . . . . : 192.168.0.1
+   DHCP Server . . . . . . . . . . . : 192.168.0.1
+   DNS Servers . . . . . . . . . . . : 192.168.0.1
+```
+*   **Diagnostic Metrics:** Subnet boundary is confirmed at a standard classless configuration mask of `255.255.255.0`. The interface tracks an active 72-hour structural network lease window.
+
+### Address Resolution Protocol Cache Map (ARP)
+```powershell
+PS C:\Users\Liams> arp -a
+
+Interface: 192.168.0.248 --- 0x8
+  Internet Address      Physical Address      Type
+  192.168.0.1           bc-85-d0-ab-f3-60     dynamic
+  192.168.0.10          1c-4d-89-cc-da-fd     dynamic
+  192.168.0.26          3a-81-c3-eb-32-ab     dynamic
+  192.168.0.255         ff-ff-ff-ff-ff-ff     static
+```
+
+### Layer 7 Domain Resolution Architecture (DNS Lookup)
+```powershell
+PS C:\Users\Liams> nslookup google.com
+Server:  myrouter.io
+Address:  fd31:5f25:cc00:2297:be00:5ff:fed0:c
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4009:c04::71
+          142.250.117.102
+          142.250.117.139
+```
 
 ---
-*Status: Staged for Academic Onboarding (August 2026) [local]*
+
+## 🦅 Commercial Integration: InsideJob Consultant LLP & VPI-X
+The terminal telemetry and layer mappings logged in this portfolio form the structural basis of **Category 1 (Mainframe Integrity & Network Command Latency)** within the proprietary **Vulnerability & Penetration Index (VPI-X)** matrix engine. 
+
+By analyzing time-to-live drops, monitoring subnet mask boundaries, and capturing hardware MAC tables, the engine automatically exposes network latency discrepancies and hardware vulnerabilities to safely secure high-end corporate and residential assets.
+
+---
+*Status: Advanced Entry Portfolio Finalized (August 2026) [local]*
