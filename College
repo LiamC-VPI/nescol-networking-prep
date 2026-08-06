@@ -1,0 +1,40 @@
+# NESCol Networking Lab Preparation & Infrastructure Logs
+### Operator: Liam Chillery | Target Track: Access to Networking (SCQF Level 6)
+
+This repository serves as a live version-controlled portfolio documenting hands-on terminal diagnostics, Layer 2 hardware address mapping, and Layer 3 path trace analysis executed in preparation for the computing faculty intake at North East Scotland College.
+
+---
+
+## 📡 Terminal Diagnostics Log Matrix
+
+### 1. Layer 3 Edge Interconnection (ICMP Ping)
+*   **Target Endpoint:** Google Public DNS (`8.8.8.8`)
+*   **Packet Integrity:** Sent = 4, Received = 4, Lost = 0 (0% packet loss)
+*   **Latency Profile:** Minimum = 17ms, Maximum = 20ms, Average = 18ms
+*   **Architectural Value:** Verifies an uncoagulated physical link layer, optimal ISP transit velocity, and complete round-trip packet stability from coordinates.
+
+### 2. Multi-Hop Gateway Path Analysis (Traceroute)
+*   **Route Geometry:** Decrypted 11 total Layer 3 hops to destination.
+*   **Local Link Layer:** Hop 1 (`192.168.0.1` / `skysr213.Home`) returned a near-zero latency response (<1 ms), proving zero interference across local intranet boundaries.
+*   **Core Transit Velocity:** Detected explicit data-packet handover to external edge network routing hubs at Hop 7 (`209.85.249.149`) with a baseline fibre propagation delay of 17ms.
+
+### 3. Layer 2 Hardware Address Mapping (ARP Table Capture)
+*   **Subnet Gateway:** privada IP `192.168.0.248` linked to an active Realtek Wi-Fi 6 (802.11ax) network card (OUI: `70-08-94`).
+*   **Live Node Extraction Table:**
+
+| Local private IP | Physical MAC Address | Allocation Type | Network Infrastructure Entity |
+| :--- | :--- | :--- | :--- |
+| `192.168.0.1` | `bc-85-d0-ab-f3-60` | Dynamic | Master Sky Router Default Gateway |
+| `192.168.0.10` | `1c-4d-89-cc-da-fd` | Dynamic | Active Intranet Target Node |
+| `192.168.0.26` | `3a-81-c3-eb-32-ab` | Dynamic | Active Intranet Target Node |
+| `192.168.0.255` | `ff-ff-ff-ff-ff-ff` | Static | Universal Local Broadcast Boundary |
+
+---
+
+## 🛡️ Core Commercial Application: InsideJob Consultant LLP
+The data-mining methodologies and terminal hooks documented in this repository are directly utilized to feed **Category 1 (Mainframe Integrity & Network Command Latency)** of the proprietary **Vulnerability & Penetration Index (VPI-X)** software app. 
+
+By capturing ARP cache address tables and profiling OUI signatures, the index automatically vectors system processing delay factors and equipment vulnerabilities across high-value residential and corporate assets.
+
+---
+*Status: Staged for Academic Onboarding (August 2026) [local]*
