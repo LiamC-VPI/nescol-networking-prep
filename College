@@ -28,7 +28,7 @@ Ping statistics for 8.8.8.8:
 Approximate round trip times in milli-seconds:
     Minimum = 17ms, Maximum = 20ms, Average = 18ms
 ```
-*   **Diagnostic Metrics:** 0% packet degradation over external WAN routing path. Average link velocity of 18ms confirms optimal, uncoagulated transit throughput across local exchanges.
+*   Diagnostic Metrics: 0% packet degradation over external WAN routing path. Average link velocity of 18ms confirms optimal, uncoagulated transit throughput across local exchanges.
 
 ### Layer 3 Multi-Hop Path Analysis (Traceroute Engine)
 ```powershell
@@ -49,7 +49,7 @@ over a maximum of 30 hops:
 
 Trace complete.
 ```
-*   **Diagnostic Metrics:** Hop 1 verifies a near-zero latency connection (<1 ms) to the physical intranet master boundary (`192.168.0.1`). Hops 3 & 4 demonstrate standard enterprise ICMP stealth filtering, while Hops 5-6 map high-velocity national fiber trunk propagation boundaries.
+*   Diagnostic Metrics: Hop 1 verifies a near-zero latency connection (<1 ms) to the physical intranet master boundary (`192.168.0.1`). Hops 3 & 4 demonstrate standard enterprise ICMP stealth filtering, while Hops 5-6 map high-velocity national fiber trunk propagation boundaries.
 
 ### Layer 2 Physical Device Fingerprint Isolation
 ```powershell
@@ -65,7 +65,7 @@ Network Adapter:  Realtek PCIe GbE Family Controller
 Physical Address: 40-C2-BA-6C-E4-B6
 Transport Name:   Media disconnected
 ```
-*   **Diagnostic Metrics:** Primary wireless transceiver is isolated as a modern Realtek Wi-Fi 6 (802.11ax) PCIe engine carrying an IEEE Organizational Unique Identifier (OUI) signature of `70-08-94`.
+*   Diagnostic Metrics: Primary wireless transceiver is isolated as a modern Realtek Wi-Fi 6 (802.11ax) PCIe engine carrying an IEEE Organizational Unique Identifier (OUI) signature of `70-08-94`.
 
 ### Full Interface Parameter Matrix Configuration
 ```powershell
@@ -84,7 +84,7 @@ Wireless LAN adapter Wi-Fi:
    DHCP Server . . . . . . . . . . . : 192.168.0.1
    DNS Servers . . . . . . . . . . . : 192.168.0.1
 ```
-*   **Diagnostic Metrics:** Subnet boundary is confirmed at a standard classless configuration mask of `255.255.255.0`. The interface tracks an active 72-hour structural network lease window.
+*   **Diagnostic Metrics: Subnet boundary is confirmed at a standard classless configuration mask of `255.255.255.0`. The interface tracks an active 72-hour structural network lease window.
 
 ### Address Resolution Protocol Cache Map (ARP)
 ```powershell
@@ -113,10 +113,10 @@ Addresses:  2a00:1450:4009:c04::71
 
 ---
 
-## 🦅 Commercial Integration: InsideJob Consultant LLP & VPI-X
-The terminal telemetry and layer mappings logged in this portfolio form the structural basis of **Category 1 (Mainframe Integrity & Network Command Latency)** within the proprietary **Vulnerability & Penetration Index (VPI-X)** matrix engine. 
+## 🦅 Commercial Integration: Adversary-minded security practitioner & Systems Architect. Specialized in forensic data audits, localized OCR text parsing pipelines, and edge containment. LLP & VPI-X
+The terminal telemetry and layer mappings logged in this portfolio form the structural basis of **Category 1 (Mainframe Integrity & Network Command Latency)** within the proprietary Vulnerability prevention intelligence extraction (VPI-X) matrix engine. 
 
 By analyzing time-to-live drops, monitoring subnet mask boundaries, and capturing hardware MAC tables, the engine automatically exposes network latency discrepancies and hardware vulnerabilities to safely secure high-end corporate and residential assets.
 
 ---
-*Status: Advanced Entry Portfolio Finalized (August 2026) [local]*
+Status: Advanced Entry Portfolio Finalized (August 2026)
